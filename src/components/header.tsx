@@ -2,14 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineGithub } from "react-icons/ai";
 
+import { ThemeSelector } from "./theme";
 import { GITHUB_URL } from "@/constants";
 
 export function Header(): React.ReactNode {
     return (
-        <header className="fixed top-0 left-0 w-full flex justify-center bg-neutral-800/75 backdrop-blur-sm">
-            <div className="flex justify-between max-w-5xl w-full">
+        <header className="fixed top-0 left-0 py-2 pr-3 w-full flex justify-center bg-neutral-200/75 dark:bg-neutral-800/75 backdrop-blur-sm">
+            <div className="flex justify-between items-center max-w-5xl w-full">
                 <nav className="flex items-center">
-                    <Link href="/" className="flex items-center gap-1 h-full p-3 font-bold mr-8">
+                    <Link
+                        href="/"
+                        className="flex items-center gap-1 h-full p-3 font-semibold mr-12"
+                    >
                         <Image
                             src={"/assets/svg/logo.svg"}
                             alt="logo"
@@ -24,14 +28,13 @@ export function Header(): React.ReactNode {
                     <a
                         href={GITHUB_URL}
                         target="_blank"
-                        className="py-3 px-1 mx-2 hidden sm:flex items-center gap-1 hover:underline offset-4"
+                        className="py-3 px-1 mx-2 hidden sm:flex items-center gap-1 hover:underline underline-offset-4"
                     >
                         <AiOutlineGithub className="" />
                         Github
                     </a>
                 </nav>
-                {/* TODO: toggle theme button */}
-                <button>Toggle</button>
+                <ThemeSelector />
             </div>
         </header>
     );
@@ -41,7 +44,7 @@ function NavLink({ href, text }: { href: string; text: string }): React.ReactNod
     return (
         <Link
             href={href}
-            className="hidden sm:inline-block py-3 px-1 mx-2 hover:underline underline-offset-4"
+            className="hidden sm:inline-block py-3 px-1 mx-4 hover:underline underline-offset-4"
         >
             {text}
         </Link>
