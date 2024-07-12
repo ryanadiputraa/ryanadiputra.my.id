@@ -1,7 +1,12 @@
-import "./globals.css";
-import { Poppins } from "next/font/google";
+import { Manrope } from "next/font/google";
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] });
+import { Header } from "@/components/header";
+import "./globals.css";
+
+const poppins = Manrope({
+    subsets: ["latin"],
+    weight: ["300", "400", "500", "600", "700", "800"]
+});
 
 export const metadata = {
     title: "Ryan Adi Putra",
@@ -15,7 +20,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body
                 className={`${poppins.className} bg-neutral-200 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50`}
             >
-                {children}
+                <Header />
+                <div className="pt-16 px-4 w-full max-w-4xl mx-auto">{children}</div>
             </body>
         </html>
     );
