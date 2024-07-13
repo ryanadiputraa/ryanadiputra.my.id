@@ -31,8 +31,8 @@ export default function Home() {
                 <p className="indent-4 text-justify">
                     Software Engineer based in Indonesia, passionate about solving problems with
                     software solutions and continuously eager to learn new things. Enjoys exploring
-                    new technologies and improving coding skills. When not online, loves to play
-                    music 🎸.
+                    new technologies and improving coding skills. When not at work, loves to play
+                    Music 🎸 and Video Games 🎮.
                 </p>
                 <Link href={"/projects"} className="mt-4 self-center">
                     <Button>My Portfolio {">"}</Button>
