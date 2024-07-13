@@ -42,10 +42,10 @@ export default function Home() {
                 <SubHeader text="Bio" />
                 <Timeline year={2001}>Born in Palu 🔨, Indonesia.</Timeline>
                 <Timeline year={2021}>
-                    Joined Glints Academy's International Internship Kampus Merdeka program 🇮🇩.
+                    Joined Glints Academy&apos;s International Internship Kampus Merdeka program 🇮🇩.
                 </Timeline>
                 <Timeline year={2022}>
-                    Joined Dicoding's Study Independence Kampus Merdeka program 🇮🇩.
+                    Joined Dicoding&apos;s Study Independence Kampus Merdeka program 🇮🇩.
                 </Timeline>
                 <Timeline year={2022}>
                     Work at Garena Indonesia as a Frontend Engineer intern 🧑🏻‍💻.
@@ -54,7 +54,8 @@ export default function Home() {
                     Remote Frontend Engineer contract at Garena Indonesia 🧑🏻‍💻.
                 </Timeline>
                 <Timeline year={2024}>
-                    Completed the Bachelor's degree in Computer Science at Tadulako University 🎓.
+                    Completed the Bachelor&apos;s degree in Computer Science at Tadulako University
+                    🎓.
                 </Timeline>
             </section>
             <section className="flex flex-col items-start">
