@@ -29,6 +29,7 @@ export function ThemeSelector(): React.ReactNode {
             ls.setItem("theme", DEFAULT_THEME);
             html?.classList.add(DEFAULT_THEME);
         } else {
+            html?.classList.remove(theme === "dark" ? "light" : "dark");
             html?.classList.add(theme);
             setTheme(theme as Theme);
         }
