@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { AiOutlineGithub } from "react-icons/ai";
 
 import { ThemeSelector } from "./theme";
@@ -41,10 +44,13 @@ export function Header(): React.ReactNode {
 }
 
 function NavLink({ href, text }: { href: string; text: string }): React.ReactNode {
+    const pathname = usePathname();
+    const isActive = pathname === href;
+
     return (
         <Link
             href={href}
-            className="hidden sm:inline-block py-3 px-1 mx-4 hover:underline underline-offset-4"
+            className={`hidden sm:inline-block py-2 px-4 mx-2 rounded-md hover:underline underline-offset-4 ${isActive ? "bg-blue-400/75" : ""}`}
         >
             {text}
         </Link>
