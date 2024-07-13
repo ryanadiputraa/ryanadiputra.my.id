@@ -3,19 +3,33 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AiOutlineGithub } from "react-icons/ai";
+import { Dispatch, SetStateAction, useLayoutEffect, useState } from "react";
+import { AiOutlineGithub, AiOutlineMenu } from "react-icons/ai";
 
 import { GITHUB_URL } from "@/constants";
+import { Button } from "./button";
 import { ThemeSelector } from "./theme";
 
 export function Header(): React.ReactNode {
+    const [isOpenDropdown, setIsOpenDropdown] = useState(false);
+
+    const handleResize = () => {
+        if (window.innerWidth > 640) setIsOpenDropdown(false);
+    };
+
+    useLayoutEffect(() => {
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
-        <header className="fixed top-0 left-0 py-2 pr-3 w-full flex justify-center backdrop-blur-sm">
+        <header className="fixed top-0 left-0 py-2 pr-3 w-full flex justify-center bg-neutral-200/30 dark:bg-neutral-800/30 backdrop-blur-md">
             <div className="flex justify-between items-center max-w-5xl w-full">
                 <nav className="flex items-center">
                     <Link
                         href="/"
                         className="flex items-center h-full p-3 font-semibold mr-12 text-lg"
+                        onClick={() => setIsOpenDropdown(false)}
                     >
                         <Image
                             src={"/assets/svg/logo.svg"}
@@ -37,7 +51,16 @@ export function Header(): React.ReactNode {
                         Github
                     </a>
                 </nav>
-                <ThemeSelector />
+                <div className="flex items-center gap-4">
+                    <ThemeSelector />
+                    <Button
+                        onClick={() => setIsOpenDropdown(prev => !prev)}
+                        className="h-8 px-2 inline-block sm:hidden text-lg"
+                    >
+                        <AiOutlineMenu />
+                    </Button>
+                    <DropdownMenu isOpen={isOpenDropdown} setIsOpen={setIsOpenDropdown} />
+                </div>
             </div>
         </header>
     );
@@ -54,5 +77,45 @@ function NavLink({ href, text }: { href: string; text: string }): React.ReactNod
         >
             {text}
         </Link>
+    );
+}
+
+function DropdownMenu({
+    isOpen,
+    setIsOpen
+}: {
+    isOpen: boolean;
+    setIsOpen: Dispatch<SetStateAction<boolean>>;
+}): React.ReactNode {
+    const pathname = usePathname();
+
+    return (
+        <div
+            className={`${isOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"} font-semibold py-2 w-40 transition-all bg-neutral-50/90 dark:bg-neutral-900/90 rounded-md fixed top-16 right-3`}
+        >
+            <Link
+                href={"/projects"}
+                onClick={() => setIsOpen(false)}
+                className={`${pathname === "/projects" ? "bg-blue-400/30" : ""} py-2 px-4 hover:bg-blue-400 inline-block w-full`}
+            >
+                Projects
+            </Link>
+            <Link
+                href={"/posts"}
+                onClick={() => setIsOpen(false)}
+                className={`${pathname === "/posts" ? "bg-blue-400/30" : ""} py-2 px-4 hover:bg-blue-400 inline-block w-full`}
+            >
+                Posts
+            </Link>
+            <a
+                href={GITHUB_URL}
+                target="_blank"
+                onClick={() => setIsOpen(false)}
+                className="py-2 px-4 hover:undeline hover:bg-blue-400 w-full flex items-center gap-1"
+            >
+                <AiOutlineGithub />
+                Github
+            </a>
+        </div>
     );
 }
