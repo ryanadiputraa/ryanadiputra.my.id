@@ -2,8 +2,8 @@ import { Manrope } from "next/font/google";
 
 import { DEFAULT_THEME } from "@/constants";
 
-import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 import "./globals.css";
 
 const font = Manrope({

@@ -3,8 +3,8 @@
 import { useLayoutEffect, useState } from "react";
 import { AiOutlineMoon, AiOutlineSun } from "react-icons/ai";
 
-import { type Theme } from "@/types";
 import { DEFAULT_THEME } from "@/constants";
+import { type Theme } from "@/types";
 
 export function ThemeSelector(): React.ReactNode {
     const [theme, setTheme] = useState<Theme>(DEFAULT_THEME);
@@ -37,8 +37,8 @@ export function ThemeSelector(): React.ReactNode {
 
     return (
         <button
-            className="w-10 h-10 grid place-items-center hover:bg-neutral-300 dark:hover:bg-neutral-700 rounded-full text-xl 
-    text-blue-400 dark:text-orange-400 border-solid border-2 border-blue-400 dark:border-orange-400 "
+            className="w-8 sm:w-10 h-8 sm:h-10 grid place-items-center hover:bg-neutral-300 dark:hover:bg-neutral-700 rounded-full text-xl 
+    text-blue-400 dark:text-orange-300 border-solid border-2 border-blue-400 dark:border-orange-300 "
             onClick={toggleTheme}
         >
             {theme === "dark" ? <AiOutlineSun /> : <AiOutlineMoon />}

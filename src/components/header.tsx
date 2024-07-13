@@ -5,8 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AiOutlineGithub } from "react-icons/ai";
 
-import { ThemeSelector } from "./theme";
 import { GITHUB_URL } from "@/constants";
+import { ThemeSelector } from "./theme";
 
 export function Header(): React.ReactNode {
     return (

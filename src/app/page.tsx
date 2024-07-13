@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-    AiOutlineMail,
     AiOutlineGithub,
+    AiOutlineInstagram,
     AiOutlineLinkedin,
-    AiOutlineInstagram
+    AiOutlineMail
 } from "react-icons/ai";
 
 import { Button } from "@/components/button";
