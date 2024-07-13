@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import { DEFAULT_THEME } from "@/constants";
 
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import "./globals.css";
 
 const font = Manrope({
@@ -23,7 +24,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 className={`${font.className} bg-neutral-200 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50 transition-colors font-thin`}
             >
                 <Header />
-                <div className="pt-32 px-4 w-full max-w-4xl mx-auto">{children}</div>
+                <div className="min-h-[95vh] pt-32 px-4 w-full max-w-4xl mx-auto">{children}</div>
+                <Footer />
             </body>
         </html>
     );

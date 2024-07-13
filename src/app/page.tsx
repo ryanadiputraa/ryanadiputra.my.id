@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+
+import { Button } from "@/components/button";
 
 export default function Home() {
     return (
@@ -25,6 +28,9 @@ export default function Home() {
                         exploring new technologies and improving coding skills. When not online,
                         loves to play music 🎸.
                     </p>
+                    <Link href={"/projects"} className="mt-4 self-center">
+                        <Button>My Portfolio</Button>
+                    </Link>
                 </div>
             </section>
         </main>
@@ -33,7 +39,7 @@ export default function Home() {
 
 function SubHeader({ text }: { text: string }): React.ReactNode {
     return (
-        <h4 className="border-solid border-b-2 border-grey-300 text-lg font-semibold mb-2">
+        <h4 className="border-solid border-b-4 border-blue-400 text-lg font-semibold mb-2">
             {text}
         </h4>
     );
