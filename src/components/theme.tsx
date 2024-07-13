@@ -38,10 +38,10 @@ export function ThemeSelector(): React.ReactNode {
     return (
         <button
             className="w-10 h-10 grid place-items-center hover:bg-neutral-300 dark:hover:bg-neutral-700 rounded-full text-xl 
-      text-orange-500 dark:text-blue-300 border-solid border-2 border-neutral-300 dark:border-neutral-700 "
+    text-blue-400 dark:text-orange-400 border-solid border-2 border-blue-400 dark:border-orange-400 "
             onClick={toggleTheme}
         >
-            {theme === "light" ? <AiOutlineSun /> : <AiOutlineMoon />}
+            {theme === "dark" ? <AiOutlineSun /> : <AiOutlineMoon />}
         </button>
     );
 }

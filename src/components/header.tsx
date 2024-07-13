@@ -7,12 +7,12 @@ import { GITHUB_URL } from "@/constants";
 
 export function Header(): React.ReactNode {
     return (
-        <header className="fixed top-0 left-0 py-2 pr-3 w-full flex justify-center bg-neutral-200/75 dark:bg-neutral-800/75 backdrop-blur-sm">
+        <header className="fixed top-0 left-0 py-2 pr-3 w-full flex justify-center backdrop-blur-sm">
             <div className="flex justify-between items-center max-w-5xl w-full">
                 <nav className="flex items-center">
                     <Link
                         href="/"
-                        className="flex items-center gap-1 h-full p-3 font-semibold mr-12"
+                        className="flex items-center h-full p-3 font-semibold mr-12 text-lg"
                     >
                         <Image
                             src={"/assets/svg/logo.svg"}

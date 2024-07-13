@@ -20,10 +20,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en" className={DEFAULT_THEME}>
             <body
-                className={`${font.className} bg-neutral-200 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50`}
+                className={`${font.className} bg-neutral-200 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50 transition-colors font-thin`}
             >
                 <Header />
-                <div className="pt-20 px-4 w-full max-w-4xl mx-auto">{children}</div>
+                <div className="pt-32 px-4 w-full max-w-4xl mx-auto">{children}</div>
             </body>
         </html>
     );
