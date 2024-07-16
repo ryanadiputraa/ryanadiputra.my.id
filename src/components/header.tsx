@@ -28,7 +28,7 @@ export function Header(): React.ReactNode {
                 <nav className="flex items-center">
                     <Link
                         href="/"
-                        className="flex items-center h-full p-3 font-semibold mr-12 text-lg"
+                        className="flex items-center h-full p-3 font-semibold mr-8 text-lg"
                         onClick={() => setIsOpenDropdown(false)}
                     >
                         <Image

@@ -21,7 +21,7 @@ export default function Projects() {
                         alt={project.name}
                         width={360}
                         height={140}
-                        className="w-full h-auto rounded-md"
+                        className="w-auto h-56 rounded-md"
                     />
                     <h4 className="text-xl font-semibold mt-2">{project.name}</h4>
                     <p>{project.shortDescription}</p>

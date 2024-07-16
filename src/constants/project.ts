@@ -45,7 +45,7 @@ export const projects: { [slug: string]: Project } = {
         url: "https://whispr.devzy.my.id",
         source: `${GITHUB_URL}/whispr`,
         platform: "Web",
-        stack: ["NestJS", "socket.io", "PostgreSQL", "NextJS", "Typescript", "Tailwind CSS"]
+        stack: ["NestJS", "socket.io", "MySQL", "NextJS", "Typescript", "Tailwind CSS"]
     },
     spotwave: {
         name: "Spotwave",
