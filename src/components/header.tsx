@@ -55,7 +55,7 @@ export function Header(): React.ReactNode {
                     <ThemeSelector />
                     <Button
                         onClick={() => setIsOpenDropdown(prev => !prev)}
-                        className="h-8 px-2 inline-block sm:hidden text-lg"
+                        className="h-10 px-2 inline-block sm:hidden text-xl"
                     >
                         <AiOutlineMenu />
                     </Button>
