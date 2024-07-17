@@ -7,7 +7,6 @@ import { Dispatch, SetStateAction, useLayoutEffect, useState } from "react";
 import { AiOutlineGithub, AiOutlineMenu } from "react-icons/ai";
 
 import { GITHUB_URL } from "@/constants";
-import { Button } from "./button";
 import { ThemeSelector } from "./theme";
 
 export function Header(): React.ReactNode {
@@ -23,7 +22,7 @@ export function Header(): React.ReactNode {
     }, []);
 
     return (
-        <header className="fixed top-0 left-0 py-2 pr-3 w-full flex justify-center bg-neutral-200/30 dark:bg-neutral-800/30 backdrop-blur-md">
+        <header className="fixed top-0 left-0 sm:py-2 pr-3 w-full flex justify-center bg-neutral-200/30 dark:bg-neutral-800/30 backdrop-blur-md">
             <div className="flex justify-between items-center max-w-5xl w-full">
                 <nav className="flex items-center">
                     <Link
@@ -53,12 +52,12 @@ export function Header(): React.ReactNode {
                 </nav>
                 <div className="flex items-center gap-4">
                     <ThemeSelector />
-                    <Button
+                    <button
                         onClick={() => setIsOpenDropdown(prev => !prev)}
-                        className="h-10 px-2 inline-block sm:hidden text-xl"
+                        className="bg-blue-400 h-8 w-10 grid place-items-center rounded-md sm:hidden text-xl"
                     >
                         <AiOutlineMenu />
-                    </Button>
+                    </button>
                     <DropdownMenu isOpen={isOpenDropdown} setIsOpen={setIsOpenDropdown} />
                 </div>
             </div>
