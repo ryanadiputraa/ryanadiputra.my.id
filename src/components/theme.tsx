@@ -1,39 +1,25 @@
 "use client";
 
-import { useLayoutEffect, useState } from "react";
+import { useState } from "react";
 import { AiOutlineMoon, AiOutlineSun } from "react-icons/ai";
 
-import { DEFAULT_THEME } from "@/constants";
+import { ONE_YEAR_IN_MILISECOND } from "@/constants";
+import { setCookie } from "@/lib/storage";
 import { type Theme } from "@/types";
 
-export function ThemeSelector(): React.ReactNode {
-    const [theme, setTheme] = useState<Theme>(DEFAULT_THEME);
+export function ThemeSelector({ initialTheme }: { initialTheme: Theme }): React.ReactNode {
+    const [theme, setTheme] = useState<Theme>(initialTheme);
+    const cookieExpireDate = new Date();
+    cookieExpireDate.setTime(cookieExpireDate.getTime() + ONE_YEAR_IN_MILISECOND);
 
     const toggleTheme = () => {
         const html = document.querySelector("html");
-        const ls = window.localStorage;
         const newVal = theme === "light" ? "dark" : "light";
-
         html?.classList.remove(theme);
         html?.classList.add(newVal);
         setTheme(newVal);
-        ls.setItem("theme", newVal);
+        setCookie("theme", newVal, cookieExpireDate);
     };
-
-    useLayoutEffect(() => {
-        const html = document.querySelector("html");
-        const ls = window.localStorage;
-        const theme = ls.getItem("theme");
-
-        if (!theme) {
-            ls.setItem("theme", DEFAULT_THEME);
-            html?.classList.add(DEFAULT_THEME);
-        } else {
-            html?.classList.remove(theme === "dark" ? "light" : "dark");
-            html?.classList.add(theme);
-            setTheme(theme as Theme);
-        }
-    }, []);
 
     return (
         <button

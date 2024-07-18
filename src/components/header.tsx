@@ -7,9 +7,11 @@ import { Dispatch, SetStateAction, useLayoutEffect, useState } from "react";
 import { AiOutlineGithub, AiOutlineMenu } from "react-icons/ai";
 
 import { GITHUB_URL } from "@/constants";
+import { type Theme } from "@/types";
+
 import { ThemeSelector } from "./theme";
 
-export function Header(): React.ReactNode {
+export function Header({ initialTheme }: { initialTheme: Theme }): React.ReactNode {
     const [isOpenDropdown, setIsOpenDropdown] = useState(false);
 
     const handleResize = () => {
@@ -51,7 +53,7 @@ export function Header(): React.ReactNode {
                     </a>
                 </nav>
                 <div className="flex items-center gap-4">
-                    <ThemeSelector />
+                    <ThemeSelector initialTheme={initialTheme} />
                     <button
                         onClick={() => setIsOpenDropdown(prev => !prev)}
                         className="bg-blue-400 h-8 w-10 grid place-items-center rounded-md sm:hidden text-xl"
