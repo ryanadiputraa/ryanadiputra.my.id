@@ -24,9 +24,9 @@ export function ThemeSelector({ initialTheme }: { initialTheme: Theme }): React.
     return (
         <button
             onClick={toggleTheme}
-            className="relative bg-amber-500 dark:bg-sky-600 rounded-full w-16 sm:w-20 h-8 sm:h-10"
+            className="relative bg-amber-500 dark:bg-sky-600 rounded-full w-16 h-8"
         >
-            <div className="absolute transition-all left-[0.15rem] sm:left-1 dark:translate-x-8 dark:sm:translate-x-10 top-[0.1rem] sm:top-[0.2rem] p-[0.4rem] sm:p-2 bg-neutral-50 dark:bg-neutral-900 rounded-full text-base sm:text-lg text-amber-500 dark:text-sky-600">
+            <div className="absolute transition-all left-[0.15rem] dark:translate-x-8 top-[0.1rem] p-[0.4rem] bg-neutral-50 dark:bg-neutral-900 rounded-full text-base text-amber-500 dark:text-sky-600">
                 {theme === "light" ? <AiOutlineSun /> : <AiOutlineMoon />}
             </div>
         </button>
