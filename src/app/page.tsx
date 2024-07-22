@@ -4,7 +4,8 @@ import {
     AiOutlineGithub,
     AiOutlineInstagram,
     AiOutlineLinkedin,
-    AiOutlineMail
+    AiOutlineMail,
+    AiOutlineRight
 } from "react-icons/ai";
 
 import { Button } from "@/components/button";
@@ -35,7 +36,9 @@ export default function Home() {
                     Music 🎸 and Video Games 🎮.
                 </p>
                 <Link href={"/projects"} className="mt-4 self-center">
-                    <Button>My Portfolio {">"}</Button>
+                    <Button className="flex items-center gap-1">
+                        My Portfolio <AiOutlineRight className="stroke-[5rem] text-sm" />
+                    </Button>
                 </Link>
             </section>
             <section className="flex flex-col items-start">
@@ -102,7 +105,7 @@ function Timeline({
     return (
         <div className="flex justify-between w-full">
             <span className="font-semibold flex-1">{year}</span>
-            <p className="flex-[4] sm:flex-[10]">{children}</p>
+            <p className="flex-[5] sm:flex-[12]">{children}</p>
         </div>
     );
 }
