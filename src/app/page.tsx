@@ -8,8 +8,10 @@ import {
     AiOutlineRight
 } from "react-icons/ai";
 
-import { Button } from "@/components/button";
 import { EMAIL, GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL } from "@/constants";
+
+import { Button } from "@/components/button";
+import profilePic from "@/assets/img/ryanadiputra.png";
 
 export default function Home() {
     return (
@@ -20,11 +22,9 @@ export default function Home() {
                     <p>Software Engineer</p>
                 </div>
                 <Image
-                    src="/assets/img/ryanadiputra.png"
+                    src={profilePic}
                     alt="Ryan Adi Putra"
-                    width={80}
-                    height={80}
-                    className="border-solid border-2 border-white rounded-full"
+                    className="h-20 w-auto border-solid border-2 border-white rounded-full"
                 />
             </section>
             <section className="flex flex-col items-start">

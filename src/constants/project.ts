@@ -1,10 +1,15 @@
 import { Project } from "@/types";
 import { GITHUB_URL } from "./url";
 
+import ggenPreview from "@/assets/img/ggen.png";
+import unClatterPreview from "@/assets/img/unclatter.png";
+import whisprPreview from "@/assets/img/whispr.png";
+import spotwavePreview from "@/assets/img/spotwave.png";
+
 export const projects: { [slug: string]: Project } = {
     ggen: {
         name: "ggen",
-        image: "/assets/img/ggen.png",
+        image: ggenPreview,
         shortDescription:
             "A CLI for generating go project with clean predefined project structure.",
         description:
@@ -15,7 +20,7 @@ export const projects: { [slug: string]: Project } = {
     },
     unclatter: {
         name: "unClatter",
-        image: "/assets/img/unclatter.png",
+        image: unClatterPreview,
         shortDescription: "Web content scrapping and bookmarking tool.",
         description:
             "unClatter is a web content scrapping and bookmarking tool, allowing users to manage essential content without distraction.",
@@ -37,7 +42,7 @@ export const projects: { [slug: string]: Project } = {
     },
     wishpr: {
         name: "Wishpr",
-        image: "/assets/img/whispr.png",
+        image: whisprPreview,
         shortDescription:
             "Silent Meet application, real-time idea-sharing for collaborative brainstorming.",
         description:
@@ -49,7 +54,7 @@ export const projects: { [slug: string]: Project } = {
     },
     spotwave: {
         name: "Spotwave",
-        image: "/assets/img/spotwave.png",
+        image: spotwavePreview,
         shortDescription:
             "Spotify playlist downloader using Spotify, Youtube, and MP3 converter API.",
         description:

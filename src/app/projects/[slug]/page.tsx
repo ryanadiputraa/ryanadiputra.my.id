@@ -19,8 +19,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
             <Image
                 src={project.image}
                 alt={project.name}
-                width={1440}
-                height={720}
+                placeholder="blur"
                 className="w-full h-auto rounded-md"
             />
             <h4 className="text-xl font-semibold text-center">{project.name}</h4>

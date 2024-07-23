@@ -10,6 +10,7 @@ import { GITHUB_URL } from "@/constants";
 import { type Theme } from "@/types";
 
 import { ThemeSelector } from "./theme";
+import logo from "@/assets/img/logo.png";
 
 export function Header({ initialTheme }: { initialTheme: Theme }): React.ReactNode {
     const [isOpenDropdown, setIsOpenDropdown] = useState(false);
@@ -29,16 +30,10 @@ export function Header({ initialTheme }: { initialTheme: Theme }): React.ReactNo
                 <nav className="flex items-center">
                     <Link
                         href="/"
-                        className="flex items-center h-full p-3 font-semibold mr-8 text-lg"
+                        className="flex items-center gap-1 h-full p-3 font-semibold mr-8 text-lg"
                         onClick={() => setIsOpenDropdown(false)}
                     >
-                        <Image
-                            src={"/assets/svg/logo.svg"}
-                            alt="logo"
-                            width={20}
-                            height={20}
-                            className="invert-0 dark:invert"
-                        />
+                        <Image src={logo} alt="logo" className="h-6 w-auto invert-0 dark:invert" />
                         Ryan Adi Putra
                     </Link>
                     <NavLink href="/projects" text="Projects" />

@@ -19,9 +19,8 @@ export default function Projects() {
                     <Image
                         src={project.image}
                         alt={project.name}
-                        width={360}
-                        height={140}
-                        className="w-auto h-56 rounded-md"
+                        placeholder="blur"
+                        className="w-full sm:w-auto h-auto sm:h-56 rounded-md"
                     />
                     <h4 className="text-xl font-semibold mt-2">{project.name}</h4>
                     <p>{project.shortDescription}</p>
