@@ -16,7 +16,7 @@ const font = Manrope({
 
 export const metadata = {
     title: "Ryan Adi Putra",
-    description: "Software Engineer portfolio website"
+    description: "Personal website, portfolio, project showcase, and tech posts."
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
