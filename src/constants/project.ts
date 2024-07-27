@@ -16,7 +16,7 @@ export const projects: { [slug: string]: Project } = {
             "ggen is a CLI for generating go project, it helps automate the process of creating a new Go project with a predefined directory structure, configuration files, and third party library/package.",
         source: `${GITHUB_URL}/ggen`,
         platform: "CLI",
-        stack: ["Go", "Cobra", "Bash"]
+        stack: ["Go", "Bash", "AWS S3"]
     },
     unclatter: {
         name: "unClatter",
@@ -34,8 +34,6 @@ export const projects: { [slug: string]: Project } = {
             "Docker",
             "AWS ECS",
             "Oauth2",
-            "Colly",
-            "Gorm",
             "Typescript",
             "Tailwind CSS"
         ]
@@ -65,7 +63,6 @@ export const projects: { [slug: string]: Project } = {
         stack: [
             "Go",
             "ReactJS",
-            "Fiber",
             "Spotify API",
             "Youtube API",
             "Oauth2",
