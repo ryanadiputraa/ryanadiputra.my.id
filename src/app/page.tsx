@@ -16,7 +16,6 @@ import { SubHeader } from "./components/subheader";
 import { Timeline } from "./components/timeline";
 
 import profilePic from "@/assets/img/ryanadiputra.png";
-import goIco from "@/assets/svg/Go.svg";
 
 export default function Home() {
     return (
@@ -66,12 +65,6 @@ export default function Home() {
                     🎓.
                 </Timeline>
             </section>
-            <section className="flex flex-col items-start">
-                <SubHeader text="Tech Stack" />
-
-                <Image src={goIco} alt="" className="w-12" />
-            </section>
-
             <section className="flex flex-col items-start">
                 <SubHeader text="Socials" />
                 <Social link={GITHUB_URL}>
