@@ -11,7 +11,12 @@ import {
 import { EMAIL, GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL } from "@/constants";
 
 import { Button } from "@/components/button";
+import { Social } from "./components/social";
+import { SubHeader } from "./components/subheader";
+import { Timeline } from "./components/timeline";
+
 import profilePic from "@/assets/img/ryanadiputra.png";
+import goIco from "@/assets/svg/Go.svg";
 
 export default function Home() {
     return (
@@ -62,6 +67,12 @@ export default function Home() {
                 </Timeline>
             </section>
             <section className="flex flex-col items-start">
+                <SubHeader text="Tech Stack" />
+
+                <Image src={goIco} alt="" className="w-12" />
+            </section>
+
+            <section className="flex flex-col items-start">
                 <SubHeader text="Socials" />
                 <Social link={GITHUB_URL}>
                     <AiOutlineGithub />
@@ -83,41 +94,5 @@ export default function Home() {
                 </a>
             </section>
         </main>
-    );
-}
-
-function SubHeader({ text }: { text: string }): React.ReactNode {
-    return (
-        <h4 className="text-lg font-semibold mb-2">
-            {text}
-            <div className="h-1 w-full bg-blue-400 rounded-md" />
-        </h4>
-    );
-}
-
-function Timeline({
-    year,
-    children
-}: {
-    year: number;
-    children: React.ReactNode;
-}): React.ReactNode {
-    return (
-        <div className="flex justify-between w-full">
-            <span className="font-semibold flex-1">{year}</span>
-            <p className="flex-[5] sm:flex-[12]">{children}</p>
-        </div>
-    );
-}
-
-function Social({ link, children }: { link: string; children: React.ReactNode }): React.ReactNode {
-    return (
-        <a
-            href={link}
-            target="_blank"
-            className="flex items-center gap-2 py-2 px-4 rounded-md text-blue-400 font-semibold hover:bg-blue-200/75 dark:hover:bg-blue-800/75"
-        >
-            {children}
-        </a>
     );
 }
