@@ -22,7 +22,7 @@ export default function Projects() {
                         placeholder="blur"
                         className="w-full sm:w-auto h-auto sm:h-56 rounded-md"
                     />
-                    <h4 className="text-xl font-semibold mt-2">{project.name}</h4>
+                    <h4 className="text-xl dark:text-white font-semibold mt-2">{project.name}</h4>
                     <p>{project.shortDescription}</p>
                 </Link>
             ))}

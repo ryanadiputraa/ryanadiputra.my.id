@@ -22,7 +22,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
                 placeholder="blur"
                 className="w-full h-auto rounded-md"
             />
-            <h4 className="text-xl font-semibold text-center">{project.name}</h4>
+            <h4 className="text-xl dark:text-white font-semibold text-center">{project.name}</h4>
             <p className="text-justify indent-4">{project.description}</p>
             <div className="flex flex-col items-start gap-2">
                 {project.url && (
@@ -58,7 +58,7 @@ function DetailItem({
             <span className="bg-teal-400/75 dark:bg-blue-700/75 text-neutral-900 dark:text-blue-300 py-[0.1rem] px-1 font-semibold mr-2">
                 {title}
             </span>
-            {children}
+            <span>{children}</span>
         </p>
     );
 }

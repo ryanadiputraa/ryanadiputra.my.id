@@ -22,7 +22,7 @@ export default function Home() {
         <main className="flex flex-col gap-12 py-4">
             <section className="flex flex-col-reverse sm:flex-row justify-between items-center sm:items-start gap-4 sm:gap-0">
                 <div className="text-center sm:text-left">
-                    <h1 className="text-4xl font-bold">Ryan Adi Putra</h1>
+                    <h1 className="text-4xl dark:text-white font-bold mb-1">Ryan Adi Putra</h1>
                     <p>Software Engineer</p>
                 </div>
                 <Image

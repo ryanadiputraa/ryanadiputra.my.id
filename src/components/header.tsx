@@ -25,7 +25,7 @@ export function Header({ initialTheme }: { initialTheme: Theme }): React.ReactNo
     }, []);
 
     return (
-        <header className="fixed top-0 left-0 sm:py-2 pr-3 w-full flex justify-center bg-neutral-200/30 dark:bg-neutral-800/30 backdrop-blur-md">
+        <header className="fixed top-0 left-0 sm:py-2 pr-3 w-full flex justify-center bg-neutral-200/30 dark:bg-neutral-800/30 dark:text-white backdrop-blur-md">
             <div className="flex justify-between items-center max-w-5xl w-full">
                 <nav className="flex items-center">
                     <Link

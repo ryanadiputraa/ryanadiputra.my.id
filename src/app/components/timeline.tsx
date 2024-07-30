@@ -7,7 +7,7 @@ export function Timeline({
 }): React.ReactNode {
     return (
         <div className="flex justify-between w-full">
-            <span className="font-semibold flex-1">{year}</span>
+            <span className="dark:text-white font-semibold flex-1">{year}</span>
             <p className="flex-[5] sm:flex-[12]">{children}</p>
         </div>
     );

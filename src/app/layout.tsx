@@ -1,4 +1,4 @@
-import { Manrope, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { cookies } from "next/headers";
 
 import { DEFAULT_THEME } from "@/constants";
@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en" className={initialTheme}>
             <body
-                className={`${font.className} bg-neutral-200 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50 transition-colors font-light`}
+                className={`${font.className} bg-neutral-200 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 transition-colors`}
             >
                 <Header initialTheme={initialTheme} />
                 <div className="min-h-[94vh] pt-28 px-4 w-full max-w-3xl mx-auto">{children}</div>
