@@ -10,7 +10,7 @@ export function Button({ children, ...props }: Props): React.ReactNode {
     return (
         <button
             {...props}
-            className={`py-2 px-4 rounded-md font-semibold bg-blue-400 text-neutral-50 active:scale-95 active:brightness-90 hover:brightness-90 ${props.className}`}
+            className={`py-2 px-3 rounded-sm font-semibold border-[1px] bg-neutral-800 border-gray-400 border-solid hover:bg-black ${props.className}`}
         >
             {children}
         </button>
