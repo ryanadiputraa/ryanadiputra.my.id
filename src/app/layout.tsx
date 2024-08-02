@@ -1,7 +1,6 @@
 import { Sora } from "next/font/google";
 
 import { Footer } from "@/components/footer";
-import { Header } from "@/components/header";
 
 import "./globals.css";
 
@@ -21,7 +20,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body
                 className={`${font.className} bg-[url('/assets/img/bg.jpg')] bg-cover bg-center bg-no-repeat bg-neutral-900 text-neutral-50 transition-colors `}
             >
-                <Header />
                 <div className="pt-20 min-h-[94vh]">{children}</div>
                 <Footer />
             </body>
