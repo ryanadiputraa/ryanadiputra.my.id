@@ -10,7 +10,7 @@ interface Props {
 export function Experience({ experience, border }: Props): React.ReactNode {
     return (
         <div
-            className={`flex flex-col gap-4 border-gray-400 ${border ? "pb-8 border-b-[1px]" : ""}`}
+            className={`flex flex-col gap-4 border-gray-700 ${border ? "pb-8 border-b-[1px]" : ""}`}
         >
             <div className="flex justify-between items-center">
                 <div className="flex gap-2 sm:gap-4">
@@ -35,11 +35,11 @@ export function Experience({ experience, border }: Props): React.ReactNode {
                     {experience.date}
                 </span>
             </div>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
                 {experience.skills.map(skill => (
                     <span
                         key={skill}
-                        className="text-xs sm:text-sm bg-neutral-800 py-1 px-3 rounded-full border-[1px] border-gray-400"
+                        className="text-xs sm:text-sm bg-neutral-800 py-1 px-3 rounded-full border-[1px] border-gray-700"
                     >
                         {skill}
                     </span>
