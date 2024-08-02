@@ -23,10 +23,10 @@ export default function Home(): React.ReactNode {
                     </a>
                 </div>
             </section>
-            <section className="bg-neutral-950 border-y-[1px] border-neutral-50 py-8 sm:py-16">
+            <section className="bg-neutral-950 border-y-[1px] border-neutral-50 py-16">
                 <div className="max-w-5xl mx-auto px-3">
                     <h2 className="text-center font-semibold text-xl italic">Experiences</h2>
-                    <div className="mt-16 flex flex-col gap-16">
+                    <div className="mt-8 flex flex-col gap-16">
                         {experiences.map((experience, i) => (
                             <Experience
                                 key={experience.date}
@@ -37,10 +37,10 @@ export default function Home(): React.ReactNode {
                     </div>
                 </div>
             </section>
-            <section className="py-8 sm:py-16">
+            <section className="py-16">
                 <div className="max-w-5xl mx-auto px-3">
                     <h2 className="text-center font-semibold text-xl italic">Projects</h2>
-                    <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-16">
+                    <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-16">
                         {Object.entries(projects).map(([slug, project]) => (
                             <Project key={project.name} project={project} />
                         ))}
