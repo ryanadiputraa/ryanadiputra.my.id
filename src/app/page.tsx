@@ -1,90 +1,51 @@
-import Image from "next/image";
-import Link from "next/link";
-import {
-    AiOutlineGithub,
-    AiOutlineInstagram,
-    AiOutlineLinkedin,
-    AiOutlineMail,
-    AiOutlineRight
-} from "react-icons/ai";
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
-import { EMAIL, GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL } from "@/constants";
+import { experiences, GITHUB_URL, LINKEDIN_URL, projects, X_URL } from "@/constants";
 
-import { Button } from "@/components/button";
-import { Social } from "./components/social";
-import { SubHeader } from "./components/subheader";
-import { Timeline } from "./components/timeline";
+import { Experience } from "./components/experience";
+import { Project } from "./components/project";
 
-import profilePic from "@/assets/img/ryanadiputra.png";
-
-export default function Home() {
+export default function Home(): React.ReactNode {
     return (
-        <main className="flex flex-col gap-12 py-4">
-            <section className="flex flex-col-reverse sm:flex-row justify-between items-center sm:items-start gap-4 sm:gap-0">
-                <div className="text-center sm:text-left">
-                    <h1 className="text-4xl dark:text-white font-bold mb-1">Ryan Adi Putra</h1>
-                    <p>Software Engineer</p>
+        <main>
+            <section className="h-[92vh] flex flex-col justify-center gap-4 items-center">
+                <h1 className="font-black text-4xl sm:text-6xl text-center">Hey, I&apos;m Ryan.</h1>
+                <span className="text-gray-400 italic">Software Engineer</span>
+                <div className="flex gap-1">
+                    <a target="_blank" href={GITHUB_URL}>
+                        <FaGithub className="p-2 text-5xl" />
+                    </a>
+                    <a target="_blank" href={LINKEDIN_URL}>
+                        <FaLinkedin className="p-2 text-5xl" />
+                    </a>
+                    <a target="_blank" href={X_URL}>
+                        <FaXTwitter className="p-2 text-5xl" />
+                    </a>
                 </div>
-                <Image
-                    src={profilePic}
-                    alt="Ryan Adi Putra"
-                    className="h-20 w-auto border-solid border-2 border-white rounded-full"
-                />
             </section>
-            <section className="flex flex-col items-start">
-                <SubHeader text="Work" />
-                <p className="indent-4 text-justify">
-                    Software Engineer based in Indonesia, passionate about solving problems with
-                    software solutions and continuously eager to learn new things. Enjoys exploring
-                    new technologies and improving coding skills. When not at work, loves to play
-                    Music 🎸 and Video Games 🎮.
-                </p>
-                <Link href={"/projects"} className="mt-4 self-center">
-                    <Button className="flex items-center gap-1">
-                        My Portfolio <AiOutlineRight className="stroke-[5rem] text-sm" />
-                    </Button>
-                </Link>
+            <section className="bg-neutral-950 border-y-[1px] border-neutral-50 py-8 sm:py-16">
+                <div className="max-w-5xl mx-auto px-3">
+                    <h2 className="text-center font-semibold text-xl italic">Experiences</h2>
+                    <div className="mt-16 flex flex-col gap-16">
+                        {experiences.map((experience, i) => (
+                            <Experience
+                                key={experience.date}
+                                experience={experience}
+                                border={i !== experiences.length - 1}
+                            />
+                        ))}
+                    </div>
+                </div>
             </section>
-            <section className="flex flex-col items-start">
-                <SubHeader text="Bio" />
-                <Timeline year={2001}>Born in Palu 🔨, Indonesia.</Timeline>
-                <Timeline year={2021}>
-                    Joined Glints Academy&apos;s International Internship Kampus Merdeka program 🇮🇩.
-                </Timeline>
-                <Timeline year={2022}>
-                    Joined Dicoding&apos;s Study Independence Kampus Merdeka program 🇮🇩.
-                </Timeline>
-                <Timeline year={2022}>
-                    Work at Garena Indonesia as a Frontend Engineer intern 🧑🏻‍💻.
-                </Timeline>
-                <Timeline year={2023}>
-                    Remote Frontend Engineer contract at Garena Indonesia 🧑🏻‍💻.
-                </Timeline>
-                <Timeline year={2024}>
-                    Completed the Bachelor&apos;s degree in Computer Science at Tadulako University
-                    🎓.
-                </Timeline>
-            </section>
-            <section className="flex flex-col items-start">
-                <SubHeader text="Socials" />
-                <Social link={GITHUB_URL}>
-                    <AiOutlineGithub />
-                    @ryanadiputraa
-                </Social>
-                <Social link={LINKEDIN_URL}>
-                    <AiOutlineLinkedin />
-                    @ryanadiputraa
-                </Social>
-                <Social link={INSTAGRAM_URL}>
-                    <AiOutlineInstagram />
-                    @ryanadiputra_
-                </Social>
-                <a href={`mailto:${EMAIL}`} className="self-center">
-                    <Button className="flex items-center gap-2 mt-4">
-                        <AiOutlineMail />
-                        Contact Me
-                    </Button>
-                </a>
+            <section className="py-8 sm:py-16">
+                <div className="max-w-5xl mx-auto px-3">
+                    <h2 className="text-center font-semibold text-xl italic">Projects</h2>
+                    <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-16">
+                        {Object.entries(projects).map(([slug, project]) => (
+                            <Project key={project.name} project={project} />
+                        ))}
+                    </div>
+                </div>
             </section>
         </main>
     );
