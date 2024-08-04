@@ -4,6 +4,8 @@ import garenaLogo from "@/assets/img/garena.png";
 import dicodingLogo from "@/assets/img/dicoding.png";
 import glintsLogo from "@/assets/img/glints.png";
 
+export const START_YEAR = 2022;
+
 export const experiences: Experience[] = [
     {
         company: "Garena Indonesia",

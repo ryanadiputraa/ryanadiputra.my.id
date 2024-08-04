@@ -1,7 +1,41 @@
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+
+import { EMAIL, GITHUB_URL, LINKEDIN_URL, START_YEAR, X_URL } from "@/constants";
+
+import { Button } from "./components/button";
+import { ExternalLink } from "./components/external-link";
+import { Nav } from "./components/nav";
+
+const now = new Date().getFullYear();
+const exp = now - START_YEAR;
+
 export default function Home(): React.ReactNode {
     return (
-        <p>
-            Hey<span className="text-primary">Name</span>
-        </p>
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-4 py-8 lg:py-0 px-6 min-h-screen">
+            <header className="lg:w-2/5 flex flex-col justify-between lg:py-20">
+                <div>
+                    <h1 className="text-neutral-50 font-bold text-4xl">Ryan Adi Putra</h1>
+                    <p className="max-w-[24rem] mt-4">
+                        Software Engineer based in Palu, Indonesia with {exp}+ years of experience.
+                    </p>
+                    <ExternalLink href={`mailto:${EMAIL}`} className="mt-4 flex">
+                        <Button>Contact Me</Button>
+                    </ExternalLink>
+                    <Nav />
+                </div>
+                <ul className="mt-8 lg:mt-0 flex gap-4">
+                    <a href={GITHUB_URL} target="_blank" className="group">
+                        <FaGithub className="text-3xl group-hover:text-neutral-50" />
+                    </a>
+                    <a href={LINKEDIN_URL} target="_blank" className="group">
+                        <FaLinkedin className="text-3xl group-hover:text-neutral-50" />
+                    </a>
+                    <a href={X_URL} target="_blank" className="group">
+                        <FaXTwitter className="text-3xl group-hover:text-neutral-50" />
+                    </a>
+                </ul>
+            </header>
+            <main className="lg:w-3/5 lg:pt-20">Content</main>
+        </div>
     );
 }

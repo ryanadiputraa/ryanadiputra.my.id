@@ -10,7 +10,14 @@ module.exports = {
         extend: {
             colors: {
                 base: "#111720",
+                "base-light": "#31363F",
                 primary: "#86CDFF"
+            },
+            height: {
+                px: "1px"
+            },
+            borderWidth: {
+                px: "1px"
             }
         }
     }
