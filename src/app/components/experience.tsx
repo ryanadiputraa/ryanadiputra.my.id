@@ -1,0 +1,40 @@
+import { FaArrowUp } from "react-icons/fa6";
+
+import { type Experience } from "@/types";
+import { ExternalLink } from "./external-link";
+
+export function Experience({ experience }: { experience: Experience }): React.ReactNode {
+    return (
+        <div className="group lg:cursor-pointer flex flex-col lg:flex-row gap-2 lg:gap-8 lg:hover:backdrop-blur-xl lg:hover:bg-primary/10 py-3 lg:px-4 rounded-sm">
+            <div className="flex-1 pt-1">
+                <span className="flex items-center gap-2 text-xs">
+                    {experience.from}
+                    <div className="w-3 h-px bg-neutral-400"></div>
+                    {experience.to}
+                </span>
+            </div>
+            <div className="flex-[3] flex flex-col gap-2">
+                <ExternalLink
+                    href={experience.link}
+                    className="lg:group-hover:text-primary transition-colors"
+                >
+                    <span>
+                        {experience.position} · {experience.company}{" "}
+                        <FaArrowUp className="inline-block text-sm rotate-45 lg:group-hover:-translate-y-1 lg:group-hover:translate-x-1 transition-transform" />
+                    </span>
+                </ExternalLink>
+                <p>{experience.description}</p>
+                <div className="flex flex-wrap gap-2">
+                    {experience.skills.map(skill => (
+                        <span
+                            key={skill}
+                            className="text-sm bg-primary/15 text-primary font-medium py-1 px-3 rounded-full"
+                        >
+                            {skill}
+                        </span>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+}

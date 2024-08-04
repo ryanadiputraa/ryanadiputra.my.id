@@ -3,7 +3,8 @@ import { StaticImageData } from "next/image";
 export interface Experience {
     company: string;
     position: string;
-    date: string;
+    from: string;
+    to: string;
     description: string;
     skills: string[];
     link: string;

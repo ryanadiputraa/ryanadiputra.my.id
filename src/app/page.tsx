@@ -3,20 +3,21 @@
 import { useRef } from "react";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
-import { EMAIL, GITHUB_URL, LINKEDIN_URL, START_YEAR, X_URL } from "@/constants";
+import { EMAIL, experiences, GITHUB_URL, LINKEDIN_URL, START_YEAR, X_URL } from "@/constants";
 
 import { About } from "./about";
 import { Button } from "./components/button";
 import { ExternalLink } from "./components/external-link";
 import { Nav } from "./components/nav";
+import { Experience } from "./components/experience";
 
 const now = new Date().getFullYear();
 const exp = now - START_YEAR;
 
 export default function Home(): React.ReactNode {
-    const aboutRef = useRef(null);
-    const experienceRef = useRef(null);
-    const projectsRef = useRef(null);
+    const aboutRef = useRef<HTMLElement | null>(null);
+    const experienceRef = useRef<HTMLElement | null>(null);
+    const projectsRef = useRef<HTMLElement | null>(null);
 
     return (
         <div className="flex flex-col lg:flex-row lg:items-start gap-16 lg:gap-4 py-8 lg:py-0 px-6 min-h-screen">
@@ -49,17 +50,21 @@ export default function Home(): React.ReactNode {
             </header>
             <main className="lg:w-3/5">
                 <About compRef={aboutRef} />
-                <section
-                    ref={experienceRef}
-                    id="experience"
-                    className="h-[150vh] mt-12 lg:mt-0 lg:pt-20"
-                >
-                    Experience
+                <section ref={experienceRef} id="experience" className="mt-12 lg:mt-0 lg:pt-20">
+                    <h4 className="lg:hidden font-medium text-neutral-50 mb-4">Experience</h4>
+                    <div className="flex flex-col gap-4">
+                        {experiences.map(experience => (
+                            <Experience
+                                key={experience.from + experience.to}
+                                experience={experience}
+                            />
+                        ))}
+                    </div>
                 </section>
                 <section
                     ref={projectsRef}
                     id="projects"
-                    className="h-[150vh] mt-12 lg:mt-0 lg:pt-20"
+                    className="h-[150vh] mt-12 lg:mt-10 lg:pt-20"
                 >
                     Projects
                 </section>

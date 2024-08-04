@@ -26,6 +26,7 @@ export function Nav({ aboutRef, experienceRef, projectsRef }: Props): React.Reac
         layoutEffect: false
     });
 
+    // TODO: fix multiple call; use single ref adjust position
     const updateNavState = (pos: number, nav: string) => {
         if (active === nav || pos < 0.3) return;
         setActive(nav);
