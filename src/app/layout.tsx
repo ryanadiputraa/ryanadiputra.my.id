@@ -1,7 +1,5 @@
 import { Sora } from "next/font/google";
 
-import { Footer } from "@/components/footer";
-
 import "./globals.css";
 
 const font = Sora({
@@ -17,11 +15,8 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            <body
-                className={`${font.className} bg-[url('/assets/img/bg.jpg')] bg-cover bg-center bg-no-repeat bg-neutral-900 text-neutral-50 transition-colors `}
-            >
-                <div className="pt-20 min-h-[94vh]">{children}</div>
-                <Footer />
+            <body className={`${font.className} bg-base text-neutral-400 font-light`}>
+                <div className="mx-auto max-w-screen-xl">{children}</div>
             </body>
         </html>
     );
