@@ -4,8 +4,16 @@ import { type Experience } from "@/types";
 import { ExternalLink } from "./external-link";
 
 export function Experience({ experience }: { experience: Experience }): React.ReactNode {
+    const openLink = () => {
+        if (window.innerWidth <= 1024) return;
+        window.open(experience.link);
+    };
+
     return (
-        <div className="group lg:cursor-pointer flex flex-col lg:flex-row gap-2 lg:gap-8 lg:hover:backdrop-blur-xl lg:hover:bg-primary/10 py-3 lg:px-4 rounded-sm">
+        <div
+            onClick={openLink}
+            className="group lg:cursor-pointer flex flex-col lg:flex-row gap-2 lg:gap-8 lg:hover:backdrop-blur-xl lg:hover:bg-primary/10 py-3 lg:px-4 rounded-sm"
+        >
             <div className="flex-1 pt-1">
                 <span className="flex items-center gap-2 text-xs">
                     {experience.from}
@@ -24,7 +32,7 @@ export function Experience({ experience }: { experience: Experience }): React.Re
                     </span>
                 </ExternalLink>
                 <p>{experience.description}</p>
-                <div className="flex flex-wrap gap-2">
+                <div className="mt-1 flex flex-wrap gap-2">
                     {experience.skills.map(skill => (
                         <span
                             key={skill}

@@ -52,7 +52,7 @@ export default function Home(): React.ReactNode {
                 <About compRef={aboutRef} />
                 <section ref={experienceRef} id="experience" className="mt-12 lg:mt-0 lg:pt-20">
                     <h4 className="lg:hidden font-medium text-neutral-50 mb-4">Experience</h4>
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-8">
                         {experiences.map(experience => (
                             <Experience
                                 key={experience.from + experience.to}
@@ -64,9 +64,10 @@ export default function Home(): React.ReactNode {
                 <section
                     ref={projectsRef}
                     id="projects"
-                    className="h-[150vh] mt-12 lg:mt-10 lg:pt-20"
+                    className="mt-12 lg:mt-10 lg:pt-20 lg:pb-20"
                 >
-                    Projects
+                    <h4 className="lg:hidden font-medium text-neutral-50 mb-4">Projects</h4>
+                    <div className="flex flex-col gap-8"></div>
                 </section>
             </main>
         </div>

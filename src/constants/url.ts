@@ -9,3 +9,5 @@ export const EPILOG_URL = "https://youtu.be/izo4HkwVlIE?si=XfXDHSzzCbkmqeoH";
 export const RUMAH_URL = "https://youtu.be/jspCwW1cVT8?si=HGNJx6TSfSbVDYwm";
 export const KAMPUS_MERDEKA_URL = "https://mandiri.kampusmerdeka.kemdikbud.go.id/";
 export const GARENA_URL = "https://www.garena.co.id/";
+export const DICODING_URL = "https://www.dicoding.com/";
+export const GLINTS_URL = "https://glints.com/id";

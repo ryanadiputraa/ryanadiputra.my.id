@@ -1,9 +1,8 @@
 import { Experience } from "@/types";
-import { GARENA_URL } from "./url";
+import { DICODING_URL, GARENA_URL, GLINTS_URL } from "./url";
 
 export const START_YEAR = 2022;
 
-// TODO: exp description & link
 export const experiences: Experience[] = [
     {
         company: "Garena Indonesia",
@@ -11,7 +10,7 @@ export const experiences: Experience[] = [
         from: "SEP 2022",
         to: "PRESENT",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non dui tortor. Suspendisse placerat efficitur felis. Sed maximus lorem nec ex ultrices sagittis. Pellentesque quis nibh eget massa tempus dapibus. Praesent sed tortor magna. Nulla mattis sollicitudin ante pretium luctus.",
+            "Developed multi-regional FreeFire, CODM, and AoV in-game web events, including E-Sports landing and information pages. Worked closely with Game Operation teams, including Backend, Designers, and Project Managers, to improve user engagement and in-game purchases.",
         skills: ["ReactJS", "Micro Fronted", "Redux", "SCSS", "Javascript"],
         link: GARENA_URL
     },
@@ -21,9 +20,9 @@ export const experiences: Experience[] = [
         from: "FEB",
         to: "Aug 2022",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non dui tortor. Suspendisse placerat efficitur felis. Sed maximus lorem nec ex ultrices sagittis. Pellentesque quis nibh eget massa tempus dapibus. Praesent sed tortor magna. Nulla mattis sollicitudin ante pretium luctus.",
+            "Built a multi-platform (iOS and Android) mobile app to simplify shopping in offline stores by developing a shop items catalog and management system. Developed an HTTP server to handle store data and generate unique QR codes for each store.",
         skills: ["NodeJS", "Flutter", "MongoDB", "expressJS", "Typescript"],
-        link: ""
+        link: DICODING_URL
     },
     {
         company: "Glints (Kampus Merdeka)",
@@ -31,8 +30,8 @@ export const experiences: Experience[] = [
         from: "2021",
         to: "2022",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non dui tortor. Suspendisse placerat efficitur felis. Sed maximus lorem nec ex ultrices sagittis. Pellentesque quis nibh eget massa tempus dapibus. Praesent sed tortor magna. Nulla mattis sollicitudin ante pretium luctus.",
+            "Developed a stock management system as a learning and collaborative project within a team, guided by a Senior Engineer Mentor. Improved code quality by participating in code reviews and one-on-one mentoring sessions.",
         skills: ["ReactJS", "NextJS", "Styled-Components", "Material UI"],
-        link: ""
+        link: GLINTS_URL
     }
 ];
