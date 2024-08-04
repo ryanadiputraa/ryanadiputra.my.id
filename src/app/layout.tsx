@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en">
+        <html lang="en" className="scroll-smooth">
             <body className={`${font.className} bg-base text-neutral-400 font-light`}>
                 <div className="mx-auto min-h-screen max-w-screen-xl">{children}</div>
             </body>

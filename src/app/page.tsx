@@ -1,3 +1,5 @@
+"use client";
+
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 import { EMAIL, GITHUB_URL, LINKEDIN_URL, START_YEAR, X_URL } from "@/constants";
@@ -11,14 +13,14 @@ const exp = now - START_YEAR;
 
 export default function Home(): React.ReactNode {
     return (
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-4 py-8 lg:py-0 px-6 min-h-screen">
-            <header className="lg:w-2/5 flex flex-col justify-between lg:py-20">
-                <div>
+        <div className="flex flex-col lg:flex-row lg:items-start gap-16 lg:gap-4 py-8 lg:py-0 px-6 min-h-screen">
+            <header className="lg:h-screen lg:w-2/5 flex lg:sticky lg:top-0 flex-col justify-between lg:py-20">
+                <div className="flex flex-col items-start">
                     <h1 className="text-neutral-50 font-bold text-4xl">Ryan Adi Putra</h1>
                     <p className="max-w-[24rem] mt-4">
                         Software Engineer based in Palu, Indonesia with {exp}+ years of experience.
                     </p>
-                    <ExternalLink href={`mailto:${EMAIL}`} className="mt-4 flex">
+                    <ExternalLink href={`mailto:${EMAIL}`} className="mt-4">
                         <Button>Contact Me</Button>
                     </ExternalLink>
                     <Nav />
@@ -35,7 +37,17 @@ export default function Home(): React.ReactNode {
                     </a>
                 </ul>
             </header>
-            <main className="lg:w-3/5 lg:pt-20">Content</main>
+            <main className="lg:w-3/5">
+                <section id="about" className="h-[150vh] lg:pt-20">
+                    About
+                </section>
+                <section id="experience" className="h-[150vh] mt-12 lg:mt-0 lg:pt-20">
+                    Experience
+                </section>
+                <section id="projects" className="h-[150vh] mt-12 lg:mt-0 lg:pt-20">
+                    Projects
+                </section>
+            </main>
         </div>
     );
 }
