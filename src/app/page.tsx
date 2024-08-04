@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef } from "react";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 import { EMAIL, GITHUB_URL, LINKEDIN_URL, START_YEAR, X_URL } from "@/constants";
@@ -12,6 +13,10 @@ const now = new Date().getFullYear();
 const exp = now - START_YEAR;
 
 export default function Home(): React.ReactNode {
+    const aboutRef = useRef(null);
+    const experienceRef = useRef(null);
+    const projectsRef = useRef(null);
+
     return (
         <div className="flex flex-col lg:flex-row lg:items-start gap-16 lg:gap-4 py-8 lg:py-0 px-6 min-h-screen">
             <header className="lg:h-screen lg:w-2/5 flex lg:sticky lg:top-0 flex-col justify-between lg:py-20">
@@ -23,7 +28,11 @@ export default function Home(): React.ReactNode {
                     <ExternalLink href={`mailto:${EMAIL}`} className="mt-4">
                         <Button>Contact Me</Button>
                     </ExternalLink>
-                    <Nav />
+                    <Nav
+                        aboutRef={aboutRef}
+                        experienceRef={experienceRef}
+                        projectsRef={projectsRef}
+                    />
                 </div>
                 <ul className="mt-8 lg:mt-0 flex gap-4">
                     <a href={GITHUB_URL} target="_blank" className="group">
@@ -38,13 +47,21 @@ export default function Home(): React.ReactNode {
                 </ul>
             </header>
             <main className="lg:w-3/5">
-                <section id="about" className="h-[150vh] lg:pt-20">
+                <section ref={aboutRef} id="about" className="h-[150vh] lg:pt-20">
                     About
                 </section>
-                <section id="experience" className="h-[150vh] mt-12 lg:mt-0 lg:pt-20">
+                <section
+                    ref={experienceRef}
+                    id="experience"
+                    className="h-[150vh] mt-12 lg:mt-0 lg:pt-20"
+                >
                     Experience
                 </section>
-                <section id="projects" className="h-[150vh] mt-12 lg:mt-0 lg:pt-20">
+                <section
+                    ref={projectsRef}
+                    id="projects"
+                    className="h-[150vh] mt-12 lg:mt-0 lg:pt-20"
+                >
                     Projects
                 </section>
             </main>
