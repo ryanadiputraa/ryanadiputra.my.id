@@ -6,7 +6,11 @@ interface Props
 
 export function ExternalLink(props: Props): React.ReactNode {
     return (
-        <a {...props} className={`text-neutral-50 font-normal ${props.className}`}>
+        <a
+            target="_blank"
+            {...props}
+            className={`text-neutral-50 hover:text-primary font-normal ${props.className}`}
+        >
             {props.children}
         </a>
     );

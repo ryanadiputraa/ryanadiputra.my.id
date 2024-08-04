@@ -27,7 +27,7 @@ export function Nav({ aboutRef, experienceRef, projectsRef }: Props): React.Reac
     });
 
     const updateNavState = (pos: number, nav: string) => {
-        if (active === nav || pos < 0.25) return;
+        if (active === nav || pos < 0.3) return;
         setActive(nav);
     };
 

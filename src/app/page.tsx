@@ -5,6 +5,7 @@ import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 import { EMAIL, GITHUB_URL, LINKEDIN_URL, START_YEAR, X_URL } from "@/constants";
 
+import { About } from "./about";
 import { Button } from "./components/button";
 import { ExternalLink } from "./components/external-link";
 import { Nav } from "./components/nav";
@@ -47,9 +48,7 @@ export default function Home(): React.ReactNode {
                 </ul>
             </header>
             <main className="lg:w-3/5">
-                <section ref={aboutRef} id="about" className="h-[150vh] lg:pt-20">
-                    About
-                </section>
+                <About compRef={aboutRef} />
                 <section
                     ref={experienceRef}
                     id="experience"
