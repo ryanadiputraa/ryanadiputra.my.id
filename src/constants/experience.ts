@@ -21,7 +21,7 @@ export const experiences: Experience[] = [
         to: "Aug 2022",
         description:
             "Built a multi-platform (iOS and Android) mobile app to simplify shopping in offline stores by developing a shop items catalog and management system. Developed an HTTP server to handle store data and generate unique QR codes for each store.",
-        skills: ["NodeJS", "Flutter", "MongoDB", "expressJS", "Typescript"],
+        skills: ["NodeJS", "Flutter", "MongoDB", "ExpressJS", "Typescript"],
         link: DICODING_URL
     },
     {

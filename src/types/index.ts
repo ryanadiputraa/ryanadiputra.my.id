@@ -14,6 +14,6 @@ export interface Project {
     name: string;
     image: StaticImageData;
     description: string;
-    url: string;
+    link: string;
     skills: string[];
 }

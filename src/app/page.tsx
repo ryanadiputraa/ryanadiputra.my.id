@@ -3,13 +3,22 @@
 import { useRef } from "react";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
-import { EMAIL, experiences, GITHUB_URL, LINKEDIN_URL, START_YEAR, X_URL } from "@/constants";
+import {
+    EMAIL,
+    experiences,
+    GITHUB_URL,
+    LINKEDIN_URL,
+    projects,
+    START_YEAR,
+    X_URL
+} from "@/constants";
 
 import { About } from "./about";
 import { Button } from "./components/button";
+import { Experience } from "./components/experience";
 import { ExternalLink } from "./components/external-link";
 import { Nav } from "./components/nav";
-import { Experience } from "./components/experience";
+import { Project } from "./components/project";
 
 const now = new Date().getFullYear();
 const exp = now - START_YEAR;
@@ -51,7 +60,7 @@ export default function Home(): React.ReactNode {
             <main className="lg:w-3/5">
                 <About compRef={aboutRef} />
                 <section ref={experienceRef} id="experience" className="mt-12 lg:mt-0 lg:pt-20">
-                    <h4 className="lg:hidden font-medium text-neutral-50 mb-4">Experience</h4>
+                    <h4 className=" lg:hidden font-medium text-neutral-50 mb-4">Experience</h4>
                     <div className="flex flex-col gap-8">
                         {experiences.map(experience => (
                             <Experience
@@ -67,7 +76,11 @@ export default function Home(): React.ReactNode {
                     className="mt-12 lg:mt-10 lg:pt-20 lg:pb-20"
                 >
                     <h4 className="lg:hidden font-medium text-neutral-50 mb-4">Projects</h4>
-                    <div className="flex flex-col gap-8"></div>
+                    <div className="flex flex-col gap-8">
+                        {projects.map(project => (
+                            <Project key={project.name} project={project} />
+                        ))}
+                    </div>
                 </section>
             </main>
         </div>
