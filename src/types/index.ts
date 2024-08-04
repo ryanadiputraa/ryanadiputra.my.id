@@ -2,12 +2,11 @@ import { StaticImageData } from "next/image";
 
 export interface Experience {
     company: string;
-    companyLogo: StaticImageData;
-    invertLogoColor?: boolean;
     position: string;
     date: string;
+    description: string;
     skills: string[];
-    jobs: string[];
+    link: string;
 }
 
 export interface Project {
@@ -15,6 +14,5 @@ export interface Project {
     image: StaticImageData;
     description: string;
     url: string;
-    source: string;
-    stack: string[];
+    skills: string[];
 }
