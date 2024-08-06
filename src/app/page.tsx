@@ -33,7 +33,7 @@ export default function Home(): React.ReactNode {
                             />
                         ))}
                     </div>
-                    <ExternalLink href="/resume.pdf" target="_blank" className="group">
+                    <ExternalLink href="/Resume.pdf" target="_blank" className="group">
                         <span>
                             View Full Resume{""}
                             <FaArrowUp className="ml-1 inline-block text-sm rotate-45 lg:group-hover:-translate-y-1 lg:group-hover:translate-x-1 transition-transform" />
