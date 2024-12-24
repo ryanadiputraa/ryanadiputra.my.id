@@ -49,7 +49,7 @@ export default function Home(): React.ReactNode {
                         <section
                             ref={projectsRef}
                             id="projects"
-                            className="mt-12 lg:mt-10 lg:pt-20 lg:pb-20"
+                            className="mt-12 lg:mt-10 lg:pt-20 lg:pb-8"
                         >
                             <h4 className="sticky w-screen top-0 -translate-x-6 py-4 px-6 lg:hidden font-medium text-neutral-50 backdrop-blur-md">
                                 Projects

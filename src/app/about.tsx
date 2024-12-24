@@ -10,7 +10,7 @@ export function About({
     compRef: MutableRefObject<HTMLElement | null>;
 }): React.ReactNode {
     return (
-        <section ref={compRef} id="about" className="lg:pt-20 lg:px-4">
+        <section ref={compRef} id="about" className="lg:pt-12 lg:px-4">
             <p>
                 I&apos;m a software engineer with professional experience in web development at{" "}
                 <ExternalLink href={GARENA_URL}>Garena Indonesia</ExternalLink>, working remotely
