@@ -8,6 +8,9 @@ module.exports = {
     plugins: [],
     theme: {
         extend: {
+            backgroundImage: {
+                layout: "url(/bg.jpg)"
+            },
             colors: {
                 base: "#111720",
                 "base-light": "#31363F",

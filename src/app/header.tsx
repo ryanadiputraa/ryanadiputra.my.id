@@ -18,7 +18,7 @@ const exp = now - START_YEAR;
 
 export function Header({ aboutRef, experienceRef, projectsRef }: Props): React.ReactNode {
     return (
-        <header className="lg:h-screen lg:w-2/5 flex lg:sticky lg:top-0 flex-col justify-between lg:py-20">
+        <header className="bg-base lg:h-screen lg:w-[24rem] flex lg:sticky lg:top-0 flex-col justify-between p-8 lg:py-20 lg:px-8">
             <div className="flex flex-col items-start">
                 <h1 className="text-neutral-50 font-bold text-4xl">Ryan Adi Putra</h1>
                 <p className="max-w-[24rem] mt-4">
