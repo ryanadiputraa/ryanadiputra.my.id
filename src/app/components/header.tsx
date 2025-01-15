@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { FaBars, FaMoon } from "react-icons/fa6"
+import { FaBars, FaMoon, FaSun } from "react-icons/fa6"
 
 import { Theme } from "@/types"
 
@@ -30,7 +30,11 @@ export function Header({ initialTheme }: Props) {
       </li>
       <li>
         <button className="px-4" onClick={toggleTheme}>
-          <FaMoon className="size-6" />
+          {theme === 'dark' ?
+            <FaMoon className="size-6" />
+            :
+            <FaSun className="size-6" />
+          }
         </button>
       </li>
     </ul>

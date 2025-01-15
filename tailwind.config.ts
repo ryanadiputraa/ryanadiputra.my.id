@@ -16,6 +16,17 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      animation: {
+        'move-right-return': 'move-right-return 1s infinite',
+      },
+      keyframes: {
+        'move-right-return': {
+          '0%': { transform: 'translateX(0)' },
+          '30%': { transform: 'translateX(0.8rem)' },
+          '70%': { transform: 'translateX(0.8rem)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      },
     },
   },
   plugins: [],
