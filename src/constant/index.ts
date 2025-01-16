@@ -36,7 +36,6 @@ export const projects = [
     description: "Web application to download your Spotify playlist using Spotify Web API.",
     tech: ["Go", "ReactJS", "Tailwind CSS"],
     github: "https://github.com/ryanadiputraa/spotwave",
-    url: "https://spotwave.devzy.my.id",
     preview: spotwave,
   },
   {
@@ -44,7 +43,6 @@ export const projects = [
     description: "Article bookmarking tool that also removes distractions like ads and popups.",
     tech: ["Go", "PostgreSQL", "AWS ECS", "NextJS", "Tailwind CSS"],
     github: "https://github.com/ryanadiputraa/unclatter",
-    url: "https://unclatter.devzy.my.id",
     preview: unclatter,
   },
   {
@@ -52,7 +50,6 @@ export const projects = [
     description: "Silent meet web application.",
     tech: ["NestJS", "MySQL", "NextJS", "Tailwind CSS"],
     github: "https://github.com/ryanadiputraa/whispr",
-    url: "https://whispr.devzy.my.id",
     preview: whispr,
   },
 ]

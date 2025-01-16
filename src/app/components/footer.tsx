@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram, FaLinkedin, FaX } from "react-icons/fa6";
+import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 import { GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL, X_URL } from "@/constant";
 
@@ -16,7 +16,7 @@ export function Footer({ className = "" }: Props) {
         <FaLinkedin className="size-6 hover:text-black dark:hover:text-white transition-colors" />
       </a>
       <a href={X_URL} target="_blank">
-        <FaX className="size-6 hover:text-black dark:hover:text-white transition-colors" />
+        <FaXTwitter className="size-6 hover:text-black dark:hover:text-white transition-colors" />
       </a>
       <a href={INSTAGRAM_URL} target="_blank">
         <FaInstagram className="size-6 hover:text-black dark:hover:text-white transition-colors" />
