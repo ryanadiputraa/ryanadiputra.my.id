@@ -26,21 +26,13 @@ export const experiences = [
 export const projects = [
   {
     name: "ggen",
-    description: "CLI for generating Go HTTP server project, it helps automate the process of creating a new Go project with a predefined directory structure, configuration files, and minimal third party library/package.",
+    description: "CLI for generating Go HTTP server project.",
     tech: ["Go", "AWS S3", "Bash"],
     github: "https://github.com/ryanadiputraa/ggen",
     preview: ggen,
   },
   {
-    name: "unClatter",
-    description: "Article bookmarking tool that also removes distractions like ads and popups. It offers a clean reading experience, allowing users to focus solely on the essential content.",
-    tech: ["Go", "PostgreSQL", "AWS ECS", "NextJS", "Tailwind CSS"],
-    github: "https://github.com/ryanadiputraa/unclatter",
-    url: "https://unclatter.devzy.my.id",
-    preview: unclatter,
-  },
-  {
-    name: "spotwave",
+    name: "Spotwave",
     description: "Web application to download your Spotify playlist using Spotify Web API.",
     tech: ["Go", "ReactJS", "Tailwind CSS"],
     github: "https://github.com/ryanadiputraa/spotwave",
@@ -48,8 +40,16 @@ export const projects = [
     preview: spotwave,
   },
   {
+    name: "unClatter",
+    description: "Article bookmarking tool that also removes distractions like ads and popups.",
+    tech: ["Go", "PostgreSQL", "AWS ECS", "NextJS", "Tailwind CSS"],
+    github: "https://github.com/ryanadiputraa/unclatter",
+    url: "https://unclatter.devzy.my.id",
+    preview: unclatter,
+  },
+  {
     name: "Whispr",
-    description: "Silent meet web application. Collaborate ideas in realtime during meeting session.",
+    description: "Silent meet web application.",
     tech: ["NestJS", "MySQL", "NextJS", "Tailwind CSS"],
     github: "https://github.com/ryanadiputraa/whispr",
     url: "https://whispr.devzy.my.id",
