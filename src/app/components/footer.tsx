@@ -6,7 +6,7 @@ interface Props {
   className?: string;
 }
 
-export function Footer({ className }: Props) {
+export function Footer({ className = "" }: Props) {
   return (
     <footer className={`flex gap-8 ${className}`}>
       <a href={GITHUB_URL} target="_blank">

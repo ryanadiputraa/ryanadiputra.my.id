@@ -1,6 +1,7 @@
 import { experiences } from "@/constant";
 
 import { Footer } from "../components/footer";
+import { AnimatedLink } from "../components/animated-link";
 
 export default function About() {
   return (
@@ -20,6 +21,7 @@ export default function About() {
           </li>
         ))}
       </ul>
+      <AnimatedLink label="See My Projects" href="/projects" className="mt-12" />
       <Footer className="mt-24" />
     </div>
   )
