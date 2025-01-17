@@ -22,5 +22,5 @@ export function Footer({ className = "" }: Props) {
         <FaInstagram className="size-6 hover:text-black dark:hover:text-white transition-colors" />
       </a>
     </footer>
-  )
+  );
 }
