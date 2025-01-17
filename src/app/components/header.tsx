@@ -44,6 +44,11 @@ export function Header({ initialTheme }: Props) {
             Projects
           </Link>
         </li>
+        <li className="cursor-pointer flex flex-col-reverse gap-2 items-center before:content-[''] before:inline-block before:w-0 before:hover:w-full before:h-[0.1rem] before:bg-slate-800 dark:before:bg-slate-400 before:transition-all">
+          <Link href="/contact" className="px-4">
+            Contact
+          </Link>
+        </li>
         <li>
           <button className="px-4" onClick={toggleTheme}>
             {theme === "dark" ? (
@@ -93,6 +98,15 @@ export function Header({ initialTheme }: Props) {
               className={`text-black dark:text-white font-semibold text-xl px-4 py-2 ${pathname === "/projects" ? "border-black dark:border-b-white border-b-2" : ""}`}
             >
               PROJECTS
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/contact"
+              onClick={onCloseNav}
+              className={`text-black dark:text-white font-semibold text-xl px-4 py-2 ${pathname === "/contact" ? "border-black dark:border-b-white border-b-2" : ""}`}
+            >
+              CONTACT
             </Link>
           </li>
         </ul>

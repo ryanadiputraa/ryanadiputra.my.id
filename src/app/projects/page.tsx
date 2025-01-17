@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AnimatedLink } from "../components/animated-link";
 import { Footer } from "../components/footer";
 
 import { projects } from "@/constant";
@@ -27,7 +28,7 @@ export default function Projects() {
                 {project.name}
               </h6>
               <p className="text-slate-400">{project.description}</p>
-              <ul className="flex gap-2">
+              <ul className="flex flex-wrap gap-2">
                 {project.tech.map((tech) => (
                   <li
                     key={tech}
@@ -41,6 +42,7 @@ export default function Projects() {
           </a>
         ))}
       </div>
+      <AnimatedLink label="Contact Me" href="/contact" className="mt-12" />
       <Footer className="mt-24" />
     </div>
   );
