@@ -43,6 +43,7 @@ export default function Contact() {
             required
             type="text"
             placeholder="e.g. John Doe"
+            value={body.name}
             onChange={(e) =>
               setBody((prev) => ({
                 ...prev,
@@ -58,6 +59,7 @@ export default function Contact() {
             required
             type="email"
             placeholder="e.g. johndoe@mail.com"
+            value={body.email}
             onChange={(e) =>
               setBody((prev) => ({
                 ...prev,
@@ -73,6 +75,7 @@ export default function Contact() {
             required
             placeholder="Leave your message here..."
             rows={6}
+            value={body.message}
             onChange={(e) =>
               setBody((prev) => ({
                 ...prev,
@@ -82,7 +85,10 @@ export default function Contact() {
             className="py-2 px-4 outline-none rounded-lg bg-transparent border-slate-700 border-2 focus:bg-slate-200 dark:focus:bg-slate-950 focus:text-black dark:focus:text-white"
           />
         </div>
-        <button className="self-start bg-slate-950 dark:bg-slate-200 text-slate-200 dark:text-slate-950 py-3 px-8 rounded-lg">
+        <button
+          disabled={isSent}
+          className="self-start bg-slate-950 dark:bg-slate-200 text-slate-200 dark:text-slate-950 py-3 px-8 rounded-lg"
+        >
           {isSent ? "Sent" : "Send Message"}
         </button>
       </form>
