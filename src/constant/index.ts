@@ -14,14 +14,21 @@ export const experiences = [
     role: "Frontend Engineer",
     date: "Sep 2022 - Present",
     description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and ",
+      "Work with regional and cross-regional teams to develop in-game web events to increase user engagement and revenue. Create and maintain micro frontend components to reduce common bugs/issues and shorten the development cycle for each web event.",
   },
   {
-    company: "Garena Indonesia",
-    role: "Frontend Engineer",
-    date: "Sep 2021 - Sep 2022",
+    company: "Dicoding Academy",
+    role: "Multi-Platform and Backend",
+    date: "Feb - Aug 2022",
     description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and ",
+      "Developed a multi-platform mobile app using to help shopping items on physical stores by scanning QR Code that generated from backend service. Improve soft and hard skills as a software engineer by learning from Tech and Soft Skills sessions held by the Dicoding Academy team",
+  },
+  {
+    company: "Glints Academy",
+    role: "International Internship Student",
+    date: "Sep 2021 - Feb 2022",
+    description:
+      "Developed a web application to learn to work in a team and improve code quality by being involved in code review with a mentor, improved soft and hard skills as a software engineer by exploring various technologies and its best practices during one-on-one sessions with a mentor and Career Preparation series from Glints Academy",
   },
 ];
 
