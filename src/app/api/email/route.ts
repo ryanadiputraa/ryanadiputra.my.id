@@ -5,16 +5,16 @@ export async function POST(req: Request) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "ryannadiputraa@gmail.com",
+        user: process.env.EMAIL,
         pass: process.env.GOOGLE_APP_PASSWORD,
       },
     });
 
     const body = await req.json();
     transporter.sendMail({
-      from: `"${body.name}" <${body.email}>`,
-      to: "ryannadiputraa@gmail.com",
-      subject: body.email,
+      from: process.env.EMAIL,
+      to: process.env.EMAIL,
+      subject: `Message from ${body.name} ${body.email}`,
       text: body.message,
     });
     return Response.json({ message: "ok" });
