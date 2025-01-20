@@ -21,14 +21,14 @@ export const experiences = [
     role: "Multi-Platform and Backend",
     date: "Feb - Aug 2022",
     description:
-      "Developed a multi-platform mobile app using to help shopping items on physical stores by scanning QR Code that generated from backend service. Improve soft and hard skills as a software engineer by learning from Tech and Soft Skills sessions held by the Dicoding Academy team",
+      "Developed a multi-platform mobile app using to help shopping items on physical stores by scanning QR Code that generated from backend service. Improve soft and hard skills as a software engineer by learning from Tech and Soft Skills sessions held by the Dicoding Academy team.",
   },
   {
     company: "Glints Academy",
     role: "International Internship Student",
     date: "Sep 2021 - Feb 2022",
     description:
-      "Developed a web application to learn to work in a team and improve code quality by being involved in code review with a mentor, improved soft and hard skills as a software engineer by exploring various technologies and its best practices during one-on-one sessions with a mentor and Career Preparation series from Glints Academy",
+      "Developed a web application to learn to work in a team and improve code quality by being involved in code review with a mentor, improved soft and hard skills as a software engineer by exploring various technologies and its best practices during one-on-one sessions with a mentor and Career Preparation series from Glints Academy.",
   },
 ];
 
