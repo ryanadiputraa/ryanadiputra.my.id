@@ -42,7 +42,7 @@ export default function Contact() {
           <input
             required
             type="text"
-            placeholder="e.g. John Doe"
+            placeholder="Enter your fullname..."
             value={body.name}
             onChange={(e) =>
               setBody((prev) => ({
@@ -58,7 +58,7 @@ export default function Contact() {
           <input
             required
             type="email"
-            placeholder="e.g. johndoe@mail.com"
+            placeholder="Enter your email..."
             value={body.email}
             onChange={(e) =>
               setBody((prev) => ({
