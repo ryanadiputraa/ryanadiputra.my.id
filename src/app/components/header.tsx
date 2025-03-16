@@ -26,7 +26,7 @@ export function Header({ initialTheme }: Props) {
 
   return (
     <>
-      <header className="sticky top-0 sm:relative z-50 flex items-center justify-between sm:max-w-screen-xl sm:mx-auto py-2 px-4 sm:px-20 bg-slate-200/70 dark:bg-slate-950/70 backdrop-blur-md sm:backdrop-blur-0">
+      <header className="sticky top-0 sm:relative z-50 flex items-center justify-between sm:max-w-screen-xl sm:mx-auto py-2 px-4 sm:px-20 bg-slate-200/70 dark:bg-slate-950/70 sm:bg-transparent dark:sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none">
         <Link href="/">
           <Image
             src={theme === "dark" ? logo : logoDarker}
