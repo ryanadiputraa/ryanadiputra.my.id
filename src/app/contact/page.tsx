@@ -24,7 +24,7 @@ export default function Contact() {
 
   return (
     <div>
-      <h4 className="text-black dark:text-white font-black text-5xl">
+      <h4 className="text-black dark:text-white font-bold text-5xl">
         Contact.
       </h4>
       <p className="mt-4">

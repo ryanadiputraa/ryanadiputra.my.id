@@ -7,7 +7,7 @@ import { projects } from "@/constant";
 export default function Projects() {
   return (
     <div>
-      <h4 className="text-black dark:text-white font-black text-5xl">
+      <h4 className="text-black dark:text-white font-bold text-5xl">
         Projects.
       </h4>
       <div className="mt-12 columns-1 lg:columns-2 gap-8">

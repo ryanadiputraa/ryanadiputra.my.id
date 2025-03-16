@@ -6,7 +6,7 @@ import { Footer } from "../components/footer";
 export default function About() {
   return (
     <div>
-      <h4 className="text-black dark:text-white font-black text-5xl">
+      <h4 className="text-black dark:text-white font-bold text-5xl">
         About Me.
       </h4>
       <ul className="relative mt-12 flex flex-col gap-12 before:content-[''] before:inline-block before:w-[0.1rem] before:h-[98%] sm:before:h-[96%] before:absolute before:top-3 before:left-[0.45rem] before:bg-slate-300 dark:before:bg-slate-700">
