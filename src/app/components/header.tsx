@@ -65,7 +65,7 @@ export function Header({ initialTheme }: Props) {
         </button>
       </header>
       <nav
-        className={`z-50 fixed top-0 w-full h-full bg-slate-200 dark:bg-slate-950 flex justify-between items-start p-8 transition-all ${isNavOpen ? "right-0" : "-right-[140rem]"}`}
+        className={`z-50 fixed top-0 w-full h-full bg-slate-200 dark:bg-slate-950 flex justify-between items-start p-8 transition-all ${isNavOpen ? "right-0" : "-right-[100dvw]"}`}
       >
         <button className="absolute top-8 left-8" onClick={toggleTheme}>
           {theme === "dark" ? (
